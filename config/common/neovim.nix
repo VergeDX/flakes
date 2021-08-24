@@ -48,7 +48,7 @@ in
 
       # https://github.com/NvChad/NvChad/tree/v1.0
       # [1] https://github.com/onsails/lspkind-nvim
-      # pkgs.vimPlugins.lspkind-nvim
+      pkgs.vimPlugins.lspkind-nvim
       # [2] https://github.com/kyazdani42/nvim-tree.lua#install
       pkgs.vimPlugins.nvim-web-devicons
       pkgs.vimPlugins.nvim-tree-lua
@@ -107,6 +107,9 @@ in
       set number
       set showtabline=2
 
+      " https://github.com/onsails/lspkind-nvim#configuration
+      lua require('lspkind').init()
+
       " https://github.com/kyazdani42/nvim-tree.lua/issues/549
       set shell=${pkgs.bash}/bin/bash
 
@@ -124,6 +127,8 @@ in
       lua require'lspconfig'.rnix.setup{}
       " https://github.com/tzachar/compe-tabnine#install
       let g:compe.source.tabnine = v:true
+      " https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#bashls
+      lua require'lspconfig'.bashls.setup{}
 
       " https://github.com/glepnir/dashboard-nvim#faq
       let g:indentLine_fileTypeExclude = ['dashboard']
@@ -154,5 +159,5 @@ in
   };
 
   # https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rnix
-  home.packages = with pkgs; [ rnix-lsp bash ];
+  home.packages = with pkgs; [ rnix-lsp bash nodePackages.bash-language-server ];
 }
