@@ -36,6 +36,7 @@
     ./darwin-extra/shells.nix
     ./common/vscode.nix
 
+    ./common/myRepos.nix
     ../pkgs/dark-mode-notify.nix
   ];
 

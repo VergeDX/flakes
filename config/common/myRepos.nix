@@ -1,4 +1,4 @@
-{ home }:
+{ home, ... }:
 let
   mrConfig = { path, url, repo }: ''
     [${path}]
