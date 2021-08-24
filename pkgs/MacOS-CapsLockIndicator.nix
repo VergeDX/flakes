@@ -1,8 +1,5 @@
-let
-  pkgs = import <nixpkgs> { };
-  buildDarwinApps = import ../fn/build-darwin-apps.nix;
-in
-buildDarwinApps rec {
+{ callPackage, pkgs }:
+callPackage ../fn/build-darwin-apps.nix { } rec {
   name = "MacOS-CapsLockIndicator";
   version = "1.0-1";
 

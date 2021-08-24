@@ -1,5 +1,4 @@
-let pkgs = import <nixpkgs> { };
-in
+{ pkgs }:
 { name, version, src, profile ? name, ... }:
 pkgs.stdenv.mkDerivation rec {
   inherit name version src;

@@ -1,10 +1,9 @@
-let
-  pkgs = import <nixpkgs> { };
-  # https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/take-last.html
-  stringTakeLast =
-    str: last:
-    let strLen = pkgs.lib.stringLength str;
-    in pkgs.lib.substring (strLen - last) strLen str;
+{ pkgs }:
+# https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/take-last.html
+let stringTakeLast =
+  str: last:
+  let strLen = pkgs.lib.stringLength str;
+  in pkgs.lib.substring (strLen - last) strLen str;
 in
 name: version: location: holderLink: sha256:
 let supportFmt = [ "dmg" "pkg" "zip" ]; in

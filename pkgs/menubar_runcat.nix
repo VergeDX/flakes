@@ -1,8 +1,5 @@
-let
-  pkgs = import <nixpkgs> { };
-  buildDarwinApps = import ../fn/build-darwin-apps.nix;
-in
-buildDarwinApps rec {
+{ callPackage, pkgs }:
+callPackage ../fn/build-darwin-apps.nix { } rec {
   name = "menubar_runcat";
   version = "3ce266a";
 

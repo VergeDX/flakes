@@ -12,13 +12,13 @@ let
 in
 {
   environment.systemPackages = [
-    (import ../pkgs/menubar_runcat.nix)
-    (import ../pkgs/MacOS-CapsLockIndicator.nix)
+    (pkgs.callPackage ../pkgs/menubar_runcat.nix { })
+    (pkgs.callPackage ../pkgs/MacOS-CapsLockIndicator.nix { })
 
     # vscode | vscode-insiders | vscodium
     vscode-with-extensions
     pkgs.kitty # pkgs.alacritty
-  ] ++ import ../fetched_apps.nix;
+  ] ++ pkgs.callPackage ../fetched_apps.nix { };
 
   environment.systemPath = [
     "/Users/vanilla/Android/sdk/platform-tools"
