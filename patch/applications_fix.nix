@@ -1,9 +1,9 @@
-{ pkgs, config, ... }:
+{ lib, config, ... }:
 let me = "vanilla";
 in
 {
   # https://github.com/LnL7/nix-darwin/issues/139
-  system.activationScripts.applications.text = pkgs.lib.mkForce (
+  system.activationScripts.applications.text = lib.mkForce (
     ''
       echo "setting up ~/Applications/Nix..."
 

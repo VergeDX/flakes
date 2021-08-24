@@ -1,20 +1,20 @@
-{ pkgs }:
+{ lib, stdenv, fetchurl, xar, cpio, p7zip }:
 # https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/take-last.html
 let stringTakeLast =
   str: last:
-  let strLen = pkgs.lib.stringLength str;
-  in pkgs.lib.substring (strLen - last) strLen str;
+  let strLen = lib.stringLength str;
+  in lib.substring (strLen - last) strLen str;
 in
 name: version: location: holderLink: sha256:
 let supportFmt = [ "dmg" "pkg" "zip" ]; in
-pkgs.stdenv.mkDerivation rec {
+stdenv.mkDerivation rec {
   inherit name version;
 
   fileType = let extName = stringTakeLast holderLink 3; in
     if builtins.elem extName supportFmt then extName
     else abort "Unsupported compression file types: ${extName}";
 
-  src = pkgs.fetchurl {
+  src = fetchurl {
     url = builtins.replaceStrings [ "{0}" "{1}" "{2}" ] [ name version location ] holderLink;
     sha256 = sha256;
 
@@ -23,7 +23,7 @@ pkgs.stdenv.mkDerivation rec {
     curlOpts = "-A :fake";
   };
 
-  nativeBuildInputs = [ pkgs.xar pkgs.cpio pkgs.p7zip ];
+  nativeBuildInputs = [ xar cpio p7zip ];
   # https://stackoverflow.com/questions/11298855/how-to-unpack-and-pack-pkg-file
   unpackPhase =
     if fileType == "dmg" then ''

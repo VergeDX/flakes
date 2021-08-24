@@ -1,6 +1,5 @@
-{ pkgs }:
-{ name, version, src, profile ? name, ... }:
-pkgs.stdenv.mkDerivation rec {
+{ stdenv, name, version, src, profile ? name }:
+stdenv.mkDerivation rec {
   inherit name version src;
 
   # https://github.com/NixOS/nixpkgs/blob/nixpkgs-unstable/pkgs/applications/terminal-emulators/iterm2/default.nix
