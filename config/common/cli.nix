@@ -42,6 +42,7 @@ in
     pkgs.jq
 
     pkgs.texlive.combined.scheme-full
+    pkgs.deploy-rs.deploy-rs
   ];
 
   # https://gist.github.com/JeffreyCA/321f9e704e5561d60f90d9f3a923a0ac

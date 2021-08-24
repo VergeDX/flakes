@@ -34,9 +34,6 @@
           ];
 
           home.packages = [
-            pkgs.rust-bin.stable.latest.default
-            pkgs.rust-bin.stable.latest.rust-src
-          ] ++ [ pkgs.deploy-rs.deploy-rs ] ++ [
             # https://github.com/SCP-2000/infrastructure/blob/master/nixos/hel0/default.nix#L10
             nvem.packages.${system}.nvem
           ];

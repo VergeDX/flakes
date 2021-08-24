@@ -13,6 +13,9 @@
     # https://github.com/ppy/osu
     pkgs.dotnet-sdk_5
     pkgs.mono
+
+    pkgs.rust-bin.stable.latest.default
+    pkgs.rust-bin.stable.latest.rust-src
   ];
 
   # https://formulae.brew.sh/formula/openjdk@8
