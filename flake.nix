@@ -1,11 +1,14 @@
 {
-  description = "A very basic flake";
+  inputs = {
+    # https://github.com/LnL7/nix-darwin#flakes-experimental
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    darwin.url = "github:lnl7/nix-darwin/master";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
+  };
 
-  outputs = { self, nixpkgs }: {
-
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    defaultPackage.x86_64-linux = self.packages.x86_64-linux.hello;
-
+  outputs = { self, darwin, nixpkgs }: {
+    darwinConfigurations."bogon" = darwin.lib.darwinSystem {
+      modules = [ ./config/darwin-configuration.nix ];
+    };
   };
 }

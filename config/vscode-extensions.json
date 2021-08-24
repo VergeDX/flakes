@@ -1,0 +1,98 @@
+[
+  {
+    "publisher": "CoenraadS",
+    "name": "bracket-pair-colorizer-2",
+    "sha256": "e70334864913756b13c2d46c86ab0b3e424a9c4443296c21fe6714a688fedb2d",
+    "version": "0.2.1"
+  },
+  {
+    "publisher": "EditorConfig",
+    "name": "EditorConfig",
+    "sha256": "8fe3f6a29ae91f4af3a88d152add096d91b5f440c4edeefe9006f73061824439",
+    "version": "0.16.4"
+  },
+  {
+    "publisher": "TabNine",
+    "name": "tabnine-vscode",
+    "sha256": "a12cc07b5a4fc1ffe14fd850ef2dbac6104d10d9e7841c1d87114dfd4703a586",
+    "version": "3.4.22"
+  },
+  {
+    "publisher": "antfu",
+    "name": "slidev",
+    "sha256": "bf3981c8488a64891def4ec1b3844642b308239b20858964408e9a00938715c6",
+    "version": "0.3.2"
+  },
+  {
+    "publisher": "bbenoist",
+    "name": "Nix",
+    "sha256": "ab0c6a386b9b9507953f6aab2c5f789dd5ff05ef6864e9fe64c0855f5cb2a07d",
+    "version": "1.0.1"
+  },
+  {
+    "publisher": "Dart-Code",
+    "name": "dart-code",
+    "sha256": "47225f15163a9e89c418fdb1d5cdea8b741e54d093c635537f8993a30cf11500",
+    "version": "3.25.1"
+  },
+  {
+    "publisher": "Dart-Code",
+    "name": "flutter",
+    "sha256": "b9ac78730008bdc86acc08f4c2ca2027612dc579b665bb795da80be968013bea",
+    "version": "3.25.0"
+  },
+  {
+    "publisher": "DotJoshJohnson",
+    "name": "xml",
+    "sha256": "67004dbdb95df0fd662dc292ee21c3ab3c5cf13e8fd42f89432e78fba1379dec",
+    "version": "2.5.1"
+  },
+  {
+    "publisher": "eamodio",
+    "name": "gitlens",
+    "sha256": "27108d13f20bfeff78c569a179bb11668d46c3e9d24a90e0678d591a89e01952",
+    "version": "11.6.0"
+  },
+  {
+    "publisher": "esbenp",
+    "name": "prettier-vscode",
+    "sha256": "a5a5cc936d61df4ccf0fd1f7f902fd46e515241752b9918b643da819c3d9853b",
+    "version": "8.1.0"
+  },
+  {
+    "publisher": "formulahendry",
+    "name": "terminal",
+    "sha256": "f611a40ff9961a1c07d00080de7503ef9fd70888ba03c0e20d56a07c7c0f473e",
+    "version": "0.0.10"
+  },
+  {
+    "publisher": "GitHub",
+    "name": "copilot",
+    "sha256": "552cf6fafbc9dd801d0baa63e0ed4c9ef2df0c7760b2649372fc7fcb3c6c2658",
+    "version": "1.3.2467"
+  },
+  {
+    "publisher": "jnoortheen",
+    "name": "nix-ide",
+    "sha256": "77f5369de2d50d98c2829b06600da4be60265f25bfebb179ae214be97f0d7e12",
+    "version": "0.1.16"
+  },
+  {
+    "publisher": "streetsidesoftware",
+    "name": "code-spell-checker",
+    "sha256": "2bca5c8e3cbd70f12f8eccf76af15fe299a27c99b82f4b9238ccb7e2b22180d2",
+    "version": "1.10.2"
+  },
+  {
+    "publisher": "tobiasalthoff",
+    "name": "atom-material-theme",
+    "sha256": "b7908aac311b0c2ba8dbcc0dfa1896aef92ddc2f6f4003df57f9dddd004643fb",
+    "version": "1.10.7"
+  },
+  {
+    "publisher": "unthrottled",
+    "name": "doki-theme",
+    "sha256": "bf2913e1287a888a6416b887c3ecc9bd6352e1f6e916791f69a4126acd3dbd98",
+    "version": "15.2.0"
+  }
+]
