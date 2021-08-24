@@ -9,6 +9,7 @@
     pkgs.kitty # pkgs.alacritty
   ] ++ pkgs.callPackage ./fetched_apps.nix { };
 
+  programs.fish.enable = true;
   environment.systemPath = [
     "/Users/vanilla/Android/sdk/platform-tools"
   ];

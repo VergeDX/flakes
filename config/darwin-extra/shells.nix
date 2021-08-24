@@ -36,7 +36,6 @@ in
   home.packages = [ thefuck_nocheck ];
   # https://github.com/LnL7/nix-darwin
   programs.fish.shellInit = ''
-    replay source /etc/static/bashrc
     thefuck --alias | source
     ${kitty_auto_match_theme_command}
 
