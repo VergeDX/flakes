@@ -7,7 +7,7 @@
     # vscode | vscode-insiders | vscodium
     (pkgs.callPackage ../pkgs/vscode-with-extensions.nix { })
     pkgs.kitty # pkgs.alacritty
-  ] ++ pkgs.callPackage ../fetched_apps.nix { };
+  ] ++ pkgs.callPackage ./fetched_apps.nix { };
 
   environment.systemPath = [
     "/Users/vanilla/Android/sdk/platform-tools"
