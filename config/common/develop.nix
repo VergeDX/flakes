@@ -6,6 +6,7 @@
 
     pkgs.nodePackages.yo
     pkgs.nodePackages.generator-code
+    pkgs.nodePackages.code-theme-converter
 
     pkgs.openocd
     pkgs.stm32cubemx
