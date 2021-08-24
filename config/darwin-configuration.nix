@@ -1,22 +1,11 @@
 { config, pkgs, ... }:
-let
-  # https://github.com/VanCoding/nix-vscode-extension-manager#installation
-  vscode-with-extensions =
-    (pkgs.vscode-with-extensions.override {
-      vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
-        (builtins.fromJSON (builtins.readFile ./vscode-extensions.json));
-    }).overrideAttrs (oldAttrs: rec {
-      # https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix#L14
-      pname = pkgs.vscode.pname;
-    });
-in
 {
   environment.systemPackages = [
     (pkgs.callPackage ../pkgs/menubar_runcat.nix { })
     (pkgs.callPackage ../pkgs/MacOS-CapsLockIndicator.nix { })
 
     # vscode | vscode-insiders | vscodium
-    vscode-with-extensions
+    (pkgs.callPackage ../pkgs/vscode-with-extensions.nix { })
     pkgs.kitty # pkgs.alacritty
   ] ++ pkgs.callPackage ../fetched_apps.nix { };
 
