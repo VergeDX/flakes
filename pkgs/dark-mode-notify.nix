@@ -14,7 +14,7 @@
         <key>ProgramArguments</key>
         <array>
           <string>/usr/local/bin/dark-mode-notify</string>
-          <string>/usr/local/bin/fish</string>
+          <string>/run/current-system/sw/bin/fish</string>
           <string>-c</string>
           <string>match_theme</string>
         </array>
