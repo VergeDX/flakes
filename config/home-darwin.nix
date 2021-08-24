@@ -1,19 +1,4 @@
 { config, pkgs, ... }:
-let
-  vergedx_config_baseurl = "https://github.com/VergeDX/config-nixpkgs/raw/master/config";
-  neovim_config = (builtins.fetchurl {
-    url = "${vergedx_config_baseurl}/neovim.nix";
-    sha256 = "1yxmlbqd2ky6sfc5agdfqmk1l6m1svgmpiqb73snadhjnl6a1n8v";
-  });
-  shells_config = (builtins.fetchurl {
-    url = "${vergedx_config_baseurl}/shells.nix";
-    sha256 = "01fmf7km7xx8qr0mvpzfa595kzxzd7dzrgf8kk675shs05wm3r9m";
-  });
-  vscode_config = (builtins.fetchurl {
-    url = "${vergedx_config_baseurl}/vscode.nix";
-    sha256 = "0k97f4xrrp070wdqwskcb0xp8nw9k2x9mqcacadvpl8ihpg6x5g8";
-  });
-in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -45,11 +30,12 @@ in
     ./common/gui.nix
     ./common/develop.nix
 
-    # neovim_config
+    ./common/neovim.nix
     ./darwin-extra/neovim.nix
-    shells_config
+    ./common/shells.nix
     ./darwin-extra/shells.nix
-    vscode_config
+    ./common/vscode.nix
+
     ../pkgs/dark-mode-notify.nix
   ];
 
