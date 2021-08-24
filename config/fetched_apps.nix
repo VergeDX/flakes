@@ -1,6 +1,6 @@
 { callPackage, pkgs }:
 let
-  fetchDarwinApps = callPackage ./fn/fetch-darwin-apps.nix { };
+  fetchDarwinApps = callPackage ../fn/fetch-darwin-apps.nix { };
 
   txBaseUrl = "https://dldir1.qq.com";
   buildGhUrl = repo: dl: "https://github.com" + repo + "releases/download/" + dl;
