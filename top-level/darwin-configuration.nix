@@ -7,7 +7,7 @@
     # vscode | vscode-insiders | vscodium
     (pkgs.callPackage ../pkgs/vscode-with-extensions.nix { })
     pkgs.kitty # pkgs.alacritty
-  ] ++ pkgs.callPackage ./fetched_apps.nix { };
+  ] ++ pkgs.callPackage ../config/fetched_apps.nix { };
 
   programs.fish.enable = true;
   environment.systemPath = [

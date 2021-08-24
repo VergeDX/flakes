@@ -25,18 +25,18 @@
 
   nixpkgs.config.allowUnfree = true;
   imports = [
-    ./common/git.nix
-    ./common/cli.nix
-    ./common/gui.nix
-    ./common/develop.nix
+    ../config/common/git.nix
+    ../config/common/cli.nix
+    ../config/common/gui.nix
+    ../config/common/develop.nix
 
-    ./common/neovim.nix
-    ./darwin-extra/neovim.nix
-    ./common/shells.nix
-    ./darwin-extra/shells.nix
-    ./common/vscode.nix
+    ../config/common/neovim.nix
+    ../config/darwin-extra/neovim.nix
+    ../config/common/shells.nix
+    ../config/darwin-extra/shells.nix
+    ../config/common/vscode.nix
 
-    ./common/myRepos.nix
+    ../config/common/myRepos.nix
     ../pkgs/dark-mode-notify.nix
   ];
 

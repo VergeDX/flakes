@@ -17,7 +17,7 @@
 
   outputs = { self, darwin, nixpkgs, home-manager, rust-overlay, deploy-rs, nvem, ... }: {
     darwinConfigurations."bogon" = darwin.lib.darwinSystem {
-      modules = [ ./config/darwin-configuration.nix ];
+      modules = [ ./top-level/darwin-configuration.nix ];
     };
 
     homeConfigurations."vanilla" =
@@ -27,7 +27,7 @@
 
         system = "x86_64-darwin";
         configuration = { pkgs, ... }: {
-          imports = [ ./config/home-darwin.nix ];
+          imports = [ ./top-level/home-darwin.nix ];
           nixpkgs.overlays = [
             rust-overlay.overlay
             deploy-rs.overlay
