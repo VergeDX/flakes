@@ -3,9 +3,6 @@
   environment.systemPackages = [
     (pkgs.callPackage ../pkgs/menubar_runcat.nix { })
     (pkgs.callPackage ../pkgs/MacOS-CapsLockIndicator.nix { })
-
-    # vscode | vscode-insiders | vscodium
-    (pkgs.callPackage ../pkgs/vscode-with-extensions.nix { })
   ];
 
   programs.fish.enable = true;
