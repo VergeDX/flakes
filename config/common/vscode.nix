@@ -2,7 +2,14 @@
 {
   programs.vscode.enable = true;
   programs.vscode.package =
-    pkgs.callPackage ../../pkgs/vscode-with-extensions.nix { };
+    # https://github.com/VanCoding/nix-vscode-extension-manager#installation
+    (pkgs.vscode-with-extensions.override {
+      vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
+        (builtins.fromJSON (builtins.readFile ../vscode-extensions.json));
+    }).overrideAttrs (oldAttrs: rec {
+      # https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix#L14
+      pname = pkgs.vscode.pname;
+    });
 
   programs.vscode.userSettings = {
     # https://github.com/doki-theme/doki-theme-vscode/tree/master/buildSrc/assets/themes/reZero
