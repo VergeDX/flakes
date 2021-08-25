@@ -37,7 +37,7 @@
     ../config/common/vscode.nix
 
     ../config/common/myRepos.nix
-    ../pkgs/dark-mode-notify.nix
+    ../patch/dark-mode-notify.nix
   ];
 
   home.sessionVariables = {
