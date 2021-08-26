@@ -55,7 +55,4 @@ in
       '' + kitty_auto_match_theme_command;
     };
   };
-
-  programs.bash.enable = true;
-  programs.bash.bashrcExtra = "source /etc/static/bashrc";
 }
