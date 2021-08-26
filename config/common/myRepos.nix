@@ -20,5 +20,6 @@ in
     (ghMrConfig "ppy" "osu")
     (ghMrConfig "VergeDX" "config-nixpkgs")
     (ghMrConfig "Vanilla-s-Lab" "vps-nixos-config")
+    (ghMrConfig "VergeDX" "flakes")
   ];
 }
