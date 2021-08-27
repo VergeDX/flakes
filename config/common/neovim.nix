@@ -111,7 +111,7 @@ in
       lua require('lspkind').init()
 
       " https://github.com/kyazdani42/nvim-tree.lua/issues/549
-      set shell=${pkgs.bash}/bin/bash
+      set shell=sh
 
       " https://github.com/hrsh7th/nvim-compe/#prerequisite
       set completeopt=menuone,noselect
