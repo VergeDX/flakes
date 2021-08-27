@@ -129,6 +129,10 @@ in
       let g:compe.source.tabnine = v:true
       " https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#bashls
       lua require'lspconfig'.bashls.setup{}
+      " https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#hls
+      lua require'lspconfig'.hls.setup{}
+      " https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#tsserver
+      lua require'lspconfig'.tsserver.setup{}
 
       " https://github.com/glepnir/dashboard-nvim#faq
       let g:indentLine_fileTypeExclude = ['dashboard']
@@ -159,5 +163,10 @@ in
   };
 
   # https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rnix
-  home.packages = with pkgs; [ rnix-lsp bash nodePackages.bash-language-server ];
+  home.packages = with pkgs; [
+    rnix-lsp
+    nodePackages.bash-language-server
+    haskell-language-server
+    pkgs.nodePackages.typescript-language-server
+  ];
 }

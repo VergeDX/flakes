@@ -17,6 +17,9 @@
 
     pkgs.rust-bin.stable.latest.default
     pkgs.rust-bin.stable.latest.rust-src
+
+    pkgs.ghc
+    pkgs.stack
   ];
 
   # https://formulae.brew.sh/formula/openjdk@8
