@@ -17,9 +17,9 @@ in
     (ghMrConfig "NixOS" "nixpkgs")
     (ghMrConfig "VergeDX" "menubar_runcat")
     (ghMrConfig "corpnewt" "ProperTree")
-    (ghMrConfig "ppy" "osu")
     (ghMrConfig "VergeDX" "config-nixpkgs")
     (ghMrConfig "Vanilla-s-Lab" "vps-nixos-config")
     (ghMrConfig "VergeDX" "flakes")
+    (ghMrConfig "tobiastimm" "code-theme-converter")
   ];
 }
