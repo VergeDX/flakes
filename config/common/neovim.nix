@@ -62,8 +62,8 @@ in
       # pkgs.vimPlugins.nvim-web-devicons | lua
       # pkgs.vimPlugins.vim-devicons | vimscript
       # [6] https://github.com/akinsho/bufferline.nvim#installation
-      # pkgs.vimPlugins.nvim-bufferline-lua
-      # pkgs.vimPlugins.nvim-web-devicons
+      pkgs.vimPlugins.bufferline-nvim
+      pkgs.vimPlugins.nvim-web-devicons
       # [7] https://github.com/kyazdani42/nvim-web-devicons#installation
       pkgs.vimPlugins.nvim-web-devicons
       # [8] https://github.com/nvim-treesitter/nvim-treesitter#installation
@@ -138,7 +138,7 @@ in
       let g:indentLine_fileTypeExclude = ['dashboard']
       " https://github.com/akinsho/bufferline.nvim#usage
       " lua vim.opt.termguicolors = true
-      " lua require("bufferline").setup{}
+      lua require("bufferline").setup{}
     '' + ''
       " https://github.com/norcalli/nvim-colorizer.lua#installation-and-usage
       " lua require'colorizer'.setup()
